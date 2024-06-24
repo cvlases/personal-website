@@ -3,6 +3,14 @@ document.getElementById('my-computer').addEventListener('click', function() {
     openPopup('html/home.html');
 });
 
+document.getElementById('links').addEventListener('click', function() {
+    openPopup('html/links.html');
+});
+
+document.getElementById('dino-game').addEventListener('click', function() {
+    openPopup('html/dino.html');
+});
+
 function openPopup(url) {
     const popup = document.createElement('div');
     popup.style.position = 'fixed';
