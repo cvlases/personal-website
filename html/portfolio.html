@@ -1,34 +1,67 @@
-<!-- home.html -->
+<!-- portfolio.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Coding Projects</title>
     <style>
         body {
             font-family: "Courier New", Courier, monospace;
             background-color: #c0c0c0;
-            margin: 0;
-            padding: 20px;
+            margin: 5;
+            padding: 25px;
             text-align: center;
+            .content p {
+            margin-bottom: 16px;
+            }
         }
         .content {
             background-color: white;
             border: 2px solid black;
-            padding: 10px;
+            padding: 20px;
             box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+            table {
+            width: 100%;
+            }
+            img {
+            vertical-align: top;
+            }
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <h1>About Me</h1>
-        <p>Hi there!</p>
-        <p>I'm Claire Vlases, a senior in college studying 
-            computer science, philosophy, and ethics.</p>
-        <p> I love art, the environment, and coding!</p>
-        <img src="../assets/profile.png" style="width:400px;height:400px;">
+        <h1>Coding Projects</h1>
+        <p>Most recently... </p>
+        <p>I've been working for the State of Montana's cybersecurity team.
+            I've been using XSOAR to automate response playbooks.
+        </p>
+        <hr>
+        <table>
+            <tr>
+                <td> 
+                    <p> My last coding job was working for my professor on
+                        dual graph theory in political redistricting.
+                        I was lucky enough to present my reserach at the 
+                        Southern California Applied Mathematics Symposium
+                        for the first time and actually won best poster and presentation!! 
+                    </p>
+                    <td>
+                        <img src="../assets/presenting.jpg" style="width:200px;height:250px;">
+                    </td>
+                </tr>
+            </table>
+        <h1>SOCAMS Research Poster</h1>
+        <h3>Presented April 2024</h3>
+        <object class="pdf" data="../assets/SOCAMS Research Poster.pdf" width="400px" height="200px"></object>
+        </object>
+        <hr>
+        <p>And a recent coding project for class that I am really proud of 
+            is this AI Art generating Google Colab. 
+        </p>
+        <a href="https://colab.research.google.com/drive/1VffeeiNu_ibA8abpDhg1CQigIuu5Lu0r?usp=sharing" target="_blank">Check it out here.</a>
+        
     </div>
 </body>
 </html>

@@ -1,6 +1,14 @@
 // popup.js
 document.getElementById('my-computer').addEventListener('click', function() {
-    openPopup('html/home.html');
+    openPopup('html/terminal.html');
+});
+
+document.getElementById('about-icon').addEventListener('click', function() {
+    openPopup('html/about.html');
+});
+
+document.getElementById('portfolio').addEventListener('click', function() {
+    openPopup('html/portfolio.html');
 });
 
 document.getElementById('links').addEventListener('click', function() {
@@ -9,6 +17,10 @@ document.getElementById('links').addEventListener('click', function() {
 
 document.getElementById('dino-game').addEventListener('click', function() {
     openPopup('html/dino.html');
+});
+
+document.getElementById('close-all').addEventListener('click', function() {
+    closeAllPopups();
 });
 
 function openPopup(url) {
@@ -32,4 +44,9 @@ function openPopup(url) {
 
 function closePopup(element) {
     document.body.removeChild(element.parentElement.parentElement);
+}
+
+function closeAllPopups() {
+    const popups = document.querySelectorAll('body > div[style*="position: fixed"]');
+    popups.forEach(popup => document.body.removeChild(popup));
 }
