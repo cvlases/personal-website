@@ -1,4 +1,3 @@
-# you-are-an-idiot
-ha ha ha ha ha ha ha
+This is the (start!!!!) of my first ever web portfolio!
 
-  <img src="assets/gif-with-window.gif" alt="hahahahha">
+Credit for the starting design idea: @ygev

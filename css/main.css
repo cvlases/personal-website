@@ -124,3 +124,18 @@ body {
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
+
+.icon {
+    cursor: pointer;
+}
+
+.popup-close {
+    position: absolute;
+    color: #4e4e4e;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
