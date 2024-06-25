@@ -1,9 +1,9 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/expand.css">
     <title>About</title>
     <style>
         body {
@@ -12,12 +12,26 @@
             margin: 0;
             padding: 30px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
         }
         .content {
             background-color: white;
             border: 2px solid black;
             padding: 10px;
             box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
+            margin-bottom: 20px; /* Space between text and expanding cards */
+            width: 80%; /* Adjust width as necessary */
+            margin: 0 auto 20px auto; /* Space between text and expanding cards, center horizontally */
+            overflow: auto; /* Ensure content inside the div is scrollable if needed */
+        
+        }
+        .container {
+            display: flex;
+            width: 80vw;
+            height: 60vh; /* Adjust the height as necessary */
         }
     </style>
 </head>
@@ -28,7 +42,24 @@
         <p>I'm Claire Vlases, a senior in college studying 
             computer science, philosophy, and ethics.</p>
         <p> I love art, the environment, and coding!</p>
-        <img src="../assets/profile.png" style="width:400px;height:400px;">
     </div>
+    <div class="container">
+        <div class="panel active" style="background-image: url('https://images.unsplash.com/photo-1610212570473-6015f631ae96?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1606838830438-5f380a664a4e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80');">
+            <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1606059100151-b09b22709477?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1778&q=80');">
+            <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1603048675767-6e79ff5b8fc1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1595433502559-d8f05e6a1041?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <h3>Explore the world</h3>
+        </div>
+    </div>
+    <script src="../js/expand.js"></script>
 </body>
 </html>

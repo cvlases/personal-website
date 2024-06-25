@@ -11,6 +11,14 @@ document.getElementById('portfolio').addEventListener('click', function() {
     openPopup('html/portfolio.html');
 });
 
+document.getElementById('art').addEventListener('click', function() {
+    openPopup('html/art.html');
+});
+
+document.getElementById('earth').addEventListener('click', function() {
+    openPopup('html/earth.html');
+});
+
 document.getElementById('links').addEventListener('click', function() {
     openPopup('html/links.html');
 });
@@ -40,13 +48,29 @@ function openPopup(url) {
             <iframe src="${url}" width="600" height="400" style="border: none;"></iframe>
         </div>`;
     document.body.appendChild(popup);
+    history.pushState({ state: state }, "", `#${state}`);
 }
 
 function closePopup(element) {
     document.body.removeChild(element.parentElement.parentElement);
+    history.pushState({}, "", window.location.pathname);
 }
 
 function closeAllPopups() {
     const popups = document.querySelectorAll('body > div[style*="position: fixed"]');
     popups.forEach(popup => document.body.removeChild(popup));
 }
+
+window.addEventListener('popstate', function(event) {
+    closeAllPopups();
+    if (event.state && event.state.state) {
+        switch (event.state.state) {
+            case 'home':
+                openPopup('html/home.html', 'home');
+                break;
+            case 'portfolio':
+                openPopup('html/links.html', 'portfolio');
+                break;
+        }
+    }
+});
