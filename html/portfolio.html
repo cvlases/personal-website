@@ -1,4 +1,3 @@
-<!-- portfolio.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,21 +11,29 @@
             margin: 5;
             padding: 25px;
             text-align: center;
-            .content p {
-            margin-bottom: 16px;
-            }
         }
         .content {
             background-color: white;
             border: 2px solid black;
             padding: 20px;
             box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
-            table {
+        }
+        .content p {
+            margin-bottom: 16px;
+        }
+        .content table {
             width: 100%;
-            }
-            img {
+        }
+        .content img {
             vertical-align: top;
-            }
+        }
+        .pdf {
+            padding: 20px;
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+        .pdf:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -40,28 +47,31 @@
         <hr>
         <table>
             <tr>
-                <td> 
+                <td>
                     <p> My last coding job was working for my professor on
                         dual graph theory in political redistricting.
                         I was lucky enough to present my reserach at the 
                         Southern California Applied Mathematics Symposium
                         for the first time and actually won best poster and presentation!! 
                     </p>
-                    <td>
-                        <img src="../assets/presenting.jpg" style="width:200px;height:250px;">
-                    </td>
-                </tr>
-            </table>
+                </td>
+                <td>
+                    <img src="../assets/presenting.jpg" style="width:200px;height:250px;">
+                </td>
+            </tr>
+        </table>
         <h1>SOCAMS Research Poster</h1>
         <h3>Presented April 2024</h3>
-        <object class="pdf" data="../assets/SOCAMS Research Poster.pdf" width="400px" height="200px"></object>
-        </object>
+        <div class="pdf">
+            <a href="../assets/SOCAMS Research Poster.pdf" target="_blank">
+                <img src="../assets/pdf-thumbnail.png" alt="SOCAMS Research Poster" class="pdf" width="400px" height="200px">
+            </a>
+        </div>
         <hr>
         <p>And a recent coding project for class that I am really proud of 
-            is this AI Art generating Google Colab. 
+            is an AI Art generating Google Colab. 
         </p>
         <a href="https://colab.research.google.com/drive/1VffeeiNu_ibA8abpDhg1CQigIuu5Lu0r?usp=sharing" target="_blank">Check it out here.</a>
-        
     </div>
 </body>
 </html>
