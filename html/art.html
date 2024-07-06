@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gallery.css">
     <title>Art Projects</title>
     <style>
         body {
@@ -28,6 +29,14 @@
             vertical-align: top;
             }
         }
+        .pdf {
+            padding: 20px;
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+        .pdf:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
@@ -37,31 +46,57 @@
         <p><b>I've been designing merch.</b>
         </p>
         <hr>
-        <table>
-            <tr>
-                <td> 
-                    <p> My last coding job was working for my professor on
-                        dual graph theory in political redistricting.
-                        I was lucky enough to present my reserach at the 
-                        Southern California Applied Mathematics Symposium
-                        for the first time and actually won best poster and presentation!! 
-                    </p>
-                    <td>
-                        <img src="../assets/presenting.jpg" style="width:200px;height:250px;">
-                    </td>
-                </tr>
-            </table>
-        <h1>SOCAMS Research Poster</h1>
-        <h3>Presented April 2024</h3>
-        <object class="pdf" data="../assets/SOCAMS Research Poster.pdf" width="400px" height="200px"></object>
-        </object>
+        <h1>Snowstock</h1>
+        <p>Merch for a band music festival featuring five bands hosted by the 5C Ski Club</p>
+        <!-- The grid: four columns -->
+        <div class="row">
+            <div class="column">
+                <img src="../assets/snowstock1.png" style="width:100px;height:100px;" alt="Front of shirt" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="../assets/snowstock2.png" style="width:100px;height:100px;" alt="Back of shirt" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="../assets/Snowstock3.png" style="width:100px;height:100px;" alt="Poster" onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <!-- The expanding image container -->
+        <div class="container">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
         <hr>
-        <h2>Scrollable HTML Comment Box Code</h2>
-        <p>And a recent coding project for class that I am really proud of 
-            is this AI Art generating Google Colab. 
-        </p>
-        <a href="https://colab.research.google.com/drive/1VffeeiNu_ibA8abpDhg1CQigIuu5Lu0r?usp=sharing" target="_blank">Check it out here.</a>
-        
+        <h1>Scripps Bike Shop</h1>
+        <p>Merch for a student-run all-female bike shop</p>
+        <img src="../assets/Scripps-bikes.png" style="width:200px;height:265px;">
+        <hr>
+        <h1>USCGA Freestyle Ski Team</h1>
+        <p>Merch for a the US Coast Guard Academy's freestyle team</p>
+        <img src="../assets/uscga.png" style="width:300px;height:280px;">
+        <hr>
+        <h1>UC Bike</h1>
+        <p>Merch for the University of Canterbury's Bike Society</p>
+        <img src="../assets/UC-bike.png" style="width:300px;height:305px;">
+        <hr>
+        <h1>Published Book: Wildflowers of Montana</h1>
+        <p>A hand-painted rendition of local wildflowers</p>
+        <div class="pdf">
+            <a href="../assets/Final-CWF.pdf" target="_blank">
+                <img src="../assets/cwf-front-page.png" alt="CWF Final" class="pdf" width="200px" height="300px">
+            </a>
+        </div>
+        <hr>
+
+
+
     </div>
+    <script src="../js/gallery.js"></script>
 </body>
 </html>
