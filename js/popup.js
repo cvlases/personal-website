@@ -43,17 +43,21 @@ function openPopup(url) {
     popup.style.boxShadow = '5px 5px 0 rgba(0,0,0,0.5)';
     popup.style.zIndex = '1000';
     popup.innerHTML = `
-        <div id="popup-header" style="padding: 10px; cursor: move; position: relative;">
-            <span onclick="closePopup(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer; font-size: 24px; font-weight: bold;">&times;</span>
-            <iframe src="${url}" width="600" height="400" style="border: none;"></iframe>
-        </div>`;
+    <div id="popup-header" style="padding: 10px; cursor: move; position: relative;">
+        <span onclick="closePopup(this)" style="position: absolute; top: 5px; right: 10px; cursor: pointer; font-size: 24px; font-weight: bold;">&times;</span>
+        <iframe src="${url}" width="600" height="400" style="border: none;"></iframe>
+    </div>`;
     document.body.appendChild(popup);
-    history.pushState({ state: state }, "", `#${state}`);
+
+// Set focus on input inside iframe after it's loaded
+const iframe = popup.querySelector("iframe");
+iframe.onload = () => {
+    iframe.contentWindow.document.getElementById("command-input")?.focus();
+};
 }
 
 function closePopup(element) {
     document.body.removeChild(element.parentElement.parentElement);
-    history.pushState({}, "", window.location.pathname);
 }
 
 function closeAllPopups() {

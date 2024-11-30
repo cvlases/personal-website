@@ -1,30 +1,25 @@
-<!-- terminal.html -->
 <!DOCTYPE html>
 <html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #c0c0c0;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            background-color: white;
-            border: 2px solid black;
-            padding: 10px;
-            box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claire's Terminal</title>
+  <link rel="stylesheet" href="../css/terminal.css">
 </head>
 <body>
-    <div class="content">
-        <h1>Terminal</h1>
-        <p>I'm hoping to make this into an AI/Terminal Page (coming soon!)</p>
+  <div id="terminal">
+    <div id="welcome-message">
+      Welcome to Claire's Terminal!<br>Type 'help' for a list of commands.
     </div>
+    <div id="output-container">
+      <div id="output"></div>
+    </div>
+    <div id="input-line">
+      <span class="prompt">guest@claire:~$</span>
+      <input type="text" id="command-input" autofocus placeholder="Type a command...">
+    </div>
+  </div>
+  <script src="../js/terminal.js"></script>
 </body>
 </html>
