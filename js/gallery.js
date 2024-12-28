@@ -1,12 +1,16 @@
-function myFunction(imgs) {
-    // Get the expanded image
-    var expandImg = document.getElementById("expandedImg");
-    // Get the image text
-    var imgText = document.getElementById("imgtext");
-    // Use the same src in the expanded image as the image being clicked on from the grid
-    expandImg.src = imgs.src;
-    // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    imgText.innerHTML = imgs.alt;
-    // Show the container element (hidden with CSS)
-    expandImg.parentElement.style.display = "block";
-  }
+// Add click events to each frame
+document.querySelectorAll('.art-frame').forEach((frame, index) => {
+  frame.addEventListener('click', () => {
+      const captions = [
+          'Snowstock: Front of Shirt',
+          'Snowstock: Back of Shirt',
+          'Snowstock: Poster',
+          'Scripps Bike Shop',
+          'USCGA Freestyle Ski Team',
+          'UC Bike',
+          'Wildflowers of Montana: Click to view the PDF'
+      ];
+      alert(captions[index]);
+  });
+});
+
