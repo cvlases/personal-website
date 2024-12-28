@@ -13,7 +13,7 @@ document.getElementById('portfolio').addEventListener('click', function () {
 });
 
 document.getElementById('art').addEventListener('click', function () {
-    openPopup('html/art.html');
+    openPopup('html/art1.html');
 });
 
 document.getElementById('earth').addEventListener('click', function () {
@@ -143,3 +143,4 @@ window.addEventListener('popstate', function (event) {
         }
     }
 });
+
