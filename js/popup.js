@@ -37,8 +37,8 @@ function openPopup(url) {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
-    const popupWidth = 600;
-    const popupHeight = 400;
+    const popupWidth = 1000;
+    const popupHeight = 650;
 
     const randomLeft = Math.max(0, Math.random() * (viewportWidth - popupWidth));
     const randomTop = Math.max(0, Math.random() * (viewportHeight - popupHeight));
